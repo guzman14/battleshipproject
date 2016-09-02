@@ -6,8 +6,7 @@ var squareSize = 50;
 // gets the container element
 var gameBoardContainer = document.getElementById("gameboard");
 
-// you can use this to convert your letters into numbers for use
-// with the 2D array
+
 var letterConversion = {
 	"A": 0,
 	"B": 1,
@@ -21,6 +20,8 @@ var letterConversion = {
 	"J": 9
 }
 
+var letterArray = ["A", "B", "C", "D","E","F","G","H","I","J"];
+
 // makes the grid columns and rows
 for (i = 0; i < cols; i++) {
 	for (j = 0; j < rows; j++) {
@@ -33,7 +34,7 @@ for (i = 0; i < cols; i++) {
 		square.id = 's' + j + i;
 		square.className = "boardSquare";
 
-		square.textContent =  i +1;
+		square.textContent = letterArray[j] + (i + 1);
 
 		// set each grid square's coordinates: multiples of the current row or column number
 		var topPosition = j * squareSize;
@@ -44,6 +45,8 @@ for (i = 0; i < cols; i++) {
 		square.style.left = leftPosition + 'px';
 	}
 }
+
+
 
 // Hardcoded 2D array to indicate where the ships are placed
 var gameBoard = [
