@@ -22,6 +22,8 @@ var letterConversion = {
 
 var letterArray = ["A", "B", "C", "D","E","F","G","H","I","J"];
 
+var userInput = $("#myInputBox").val();
+
 // makes the grid columns and rows
 for (i = 0; i < cols; i++) {
 	for (j = 0; j < rows; j++) {
@@ -62,6 +64,33 @@ var gameBoard = [
 				[1,0,0,0,0,0,0,0,0,0]
 				]
 
+var x;
+
+var column;
+var torpedo;
+var first;
+var second;
+var converted;
+var hitHolder = 0;
+
+
+
 function fireTorpedo() {
-console.log();
-}
+
+		torpedo = document.getElementById("fireInput").value;
+		x = torpedo.substring(0, 1);
+	 row = letterConversion[x];
+	 column = torpedo.substring(1, 3);
+
+		if (gameBoard[row][column - 1] == 1){
+
+			    document.getElementById("s" + row + (column - 1)).style.background =  "red";
+
+			    }
+			    else {
+
+			       document.getElementById("s" + row + (column - 1)).style.background = "grey";
+
+			        }
+			         var userInput = $("fireInput").val();
+			          }
