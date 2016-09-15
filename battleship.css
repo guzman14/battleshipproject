@@ -7,13 +7,20 @@ body {
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    color: black;
 }
 
-p, button, input {
+ button, input {
     font-size: 1.5em;
     line-height: 1.4em;
-    color: #333;
+    color: black;
 	margin-bottom:1em;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.4em;
+  color: black;
 }
 
 #gameboard {
@@ -44,4 +51,5 @@ p, button, input {
   position:relative;
   margin:0 auto 2em auto;
   width:500px;
+}
 }

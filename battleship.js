@@ -71,13 +71,16 @@ var torpedo;
 var first;
 var second;
 var converted;
-var hitHolder = 0;
-
+var hitHolder = 1;
+var aFire = new Audio;
+aFire.src = 'Gunshot.mp3'
+var gameOver;
 
 
 function fireTorpedo() {
-
+		aFire.play();
 		torpedo = document.getElementById("fireInput").value;
+
 		x = torpedo.substring(0, 1);
 	 row = letterConversion[x];
 	 column = torpedo.substring(1, 3);
